@@ -1,0 +1,98 @@
+$p-LightCyan: hsl(193, 38%, 86%);
+$p-NeonGreen: hsl(150, 100%, 66%);
+$n-GrayishBlue: hsl(217, 19%, 38%);
+$n-DarkGrayishBlue: hsl(217, 19%, 24%);
+$n-DarkBlue: hsl(218, 23%, 16%);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	font-family: 'Manrope', sans-serif;
+	font-size: 28px;
+	background-color: $n-DarkBlue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	height: 45vh;
+	width: 40vw;
+	background-color: $n-DarkGrayishBlue;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 10px;
+	position: relative;
+	padding: 2em;
+	padding-bottom: 2.5em;
+}
+
+h1 {
+	font-size: 0.5em;
+	color: $p-NeonGreen;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+p {
+	color: $p-LightCyan;
+	text-align: center;
+}
+
+.illustration {
+	height: 10%;
+	width: 100%;
+	background-image: url('./images/pattern-divider-desktop.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+button {
+	height: 60px;
+	width: 60px;
+	border-radius: 9999px;
+	border: none;
+	background-color: $p-NeonGreen;
+	background-image: url('./images/icon-dice.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	bottom: 0%;
+	transform: translateY(50%);
+	cursor: pointer;
+
+	&:hover {
+		box-shadow: 0rem 0rem 2rem $p-NeonGreen;
+	}
+}
+
+.attribution {
+	font-size: 11px;
+	color: $n-GrayishBlue;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	a {
+		color: $p-LightCyan;
+		text-decoration: none;
+	}
+}
+
+@media (max-width: 500px) {
+	main {
+		height: 60vh;
+		width: 90vw;
+	}
+
+	.illustration {
+		background-image: url('./images/pattern-divider-mobile.svg');
+	}
+}
